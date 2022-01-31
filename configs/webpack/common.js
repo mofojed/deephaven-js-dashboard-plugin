@@ -1,12 +1,14 @@
 // shared config (dev and prod)
 const { resolve } = require("path");
-const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 module.exports = {
   resolve: {
     extensions: [".js", ".jsx", ".ts", ".tsx"],
   },
   context: resolve(__dirname, "../../src"),
+  output: {
+    libraryTarget: "commonjs",
+  },
   module: {
     rules: [
       {
@@ -31,10 +33,9 @@ module.exports = {
       },
     ],
   },
-  plugins: [new HtmlWebpackPlugin({ template: "index.html.ejs" })],
+  plugins: [],
   externals: {
-    react: "React",
-    "react-dom": "ReactDOM",
+    react: "react",
   },
   performance: {
     hints: false,
