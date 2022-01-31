@@ -7,7 +7,7 @@
     "matplotlib",
     "plugin"
   ],
-  "author": "Mike Bender",
+  "author": "Deephaven Data Labs LLC",
   "license": "Apache-2.0",
   "repository": {
     "type": "git",
@@ -78,5 +78,8 @@
   },
   "dependencies": {
     "shortid": "^2.2.16"
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }
