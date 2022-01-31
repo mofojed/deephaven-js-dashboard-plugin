@@ -1,6 +1,6 @@
 {
   "name": "@deephaven/matplotlib-js-plugin",
-  "version": "0.9.3",
+  "version": "0.9.4",
   "description": "Deephaven matplotlib plugin",
   "keywords": [
     "Deephaven",
@@ -9,6 +9,7 @@
   ],
   "author": "Deephaven Data Labs LLC",
   "license": "Apache-2.0",
+  "main": "dist/index.js",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/deephaven/web-client-ui"
