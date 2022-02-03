@@ -67,4 +67,6 @@ export const DashboardPlugin = ({ id, layout, registerComponent }) => {
   return <></>;
 };
 
+DashboardPlugin.name = "MatPlotLib.DashboardPlugin";
+
 export default DashboardPlugin;
