@@ -67,6 +67,4 @@ export const DashboardPlugin = ({ id, layout, registerComponent }) => {
   return <></>;
 };
 
-DashboardPlugin.name = "@deephaven/matplotlib-js-plugin.DashboardPlugin";
-
 export default DashboardPlugin;
