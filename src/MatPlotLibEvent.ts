@@ -1,5 +1,5 @@
 class MatPlotLibEvent {
-  static OPEN = 'MatPlotLib.OPEN';
+  static OPEN = "MatPlotLib.OPEN";
 }
 
 export default MatPlotLibEvent;
