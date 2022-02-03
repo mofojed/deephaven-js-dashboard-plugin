@@ -4,7 +4,7 @@ import { LayoutUtils, useListener } from "@deephaven/dashboard";
 import MatPlotLibPanel from "./MatPlotLibPanel";
 import MatPlotLibEvent from "./MatPlotLibEvent";
 
-export const MatPlotLibPlugin = ({ id, layout, registerComponent }) => {
+export const DashboardPlugin = ({ id, layout, registerComponent }) => {
   const handleOpen = useCallback(
     (title, makeModel, metadata, panelId = shortid.generate(), dragEvent) => {
       const config = {
@@ -67,4 +67,4 @@ export const MatPlotLibPlugin = ({ id, layout, registerComponent }) => {
   return <></>;
 };
 
-export default MatPlotLibPlugin;
+export default DashboardPlugin;

@@ -1,8 +1,11 @@
-import MatPlotLibPlugin from "./MatPlotLibPlugin";
+import DashboardPlugin from "./DashboardPlugin";
 export { default as MatPlotLibEvent } from "./MatPlotLibEvent";
 export { default as MatPlotLibPanel } from "./MatPlotLibPanel";
-export { default as MatPlotLibPlugin } from "./MatPlotLibPlugin";
+export { default as DashboardPlugin } from "./DashboardPlugin";
+
+export const name = "MatPlotLib";
 
 export default {
-  DashboardPlugin: MatPlotLibPlugin,
+  name,
+  DashboardPlugin,
 };
