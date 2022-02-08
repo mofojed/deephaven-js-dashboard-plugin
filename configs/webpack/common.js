@@ -1,5 +1,6 @@
 // shared config (dev and prod)
 const { resolve } = require("path");
+const webpack = require("webpack");
 
 module.exports = {
   resolve: {
@@ -33,7 +34,13 @@ module.exports = {
       },
     ],
   },
-  plugins: [],
+  plugins: [
+    new webpack.ProvidePlugin({
+      $: "jquery",
+      jQuery: "jquery",
+      "window.jQuery": "jquery",
+    }),
+  ],
   externals: {
     react: "react",
   },
