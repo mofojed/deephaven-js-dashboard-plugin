@@ -12,9 +12,7 @@ export const DashboardPlugin = ({ id, layout, registerComponent }) => {
       if (type !== MatPlotLibVariableType) {
         return;
       }
-      const metadata = { name };
-      const makeModel = () =>
-        fetch().then((response) => response.getDataAsBase64());
+      const metadata = { name, type };
       const config = {
         type: "react-component",
         component: MatPlotLibPanel.COMPONENT,
@@ -22,7 +20,7 @@ export const DashboardPlugin = ({ id, layout, registerComponent }) => {
           localDashboardId: id,
           id: panelId,
           metadata,
-          makeModel,
+          fetch,
         },
         title: name,
         id: panelId,

@@ -3,8 +3,13 @@
 import React from "react";
 import "./MatPlotLibPanel.scss";
 
+export type MatPlotLibWidget = {
+  type: string;
+  getDataAsBase64: () => string;
+};
+
 export type MatPlotLibPanelProps = {
-  makeModel: () => string;
+  fetch: () => Promise<MatPlotLibWidget>;
 };
 
 export type MatPlotLibPanelState = {
@@ -33,8 +38,9 @@ export class MatPlotLibPanel extends React.Component<
   }
 
   async initImage() {
-    const { makeModel } = this.props;
-    const imageData = await makeModel();
+    const { fetch } = this.props;
+    const widget = await fetch();
+    const imageData = widget.getDataAsBase64();
     this.setState({ imageData });
   }
 
