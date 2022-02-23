@@ -1,6 +1,6 @@
 {
   "name": "@deephaven/matplotlib-js-plugin",
-  "version": "0.9.5-alpha.8",
+  "version": "0.9.5-alpha.9",
   "description": "Deephaven matplotlib plugin",
   "keywords": [
     "Deephaven",
