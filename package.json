@@ -1,12 +1,12 @@
 {
-  "name": "@deephaven/matplotlib-js-plugin",
-  "version": "0.10.0",
+  "name": "@deephaven/js-plugin-matplotlib",
+  "version": "0.1.0",
   "description": "Deephaven matplotlib plugin",
   "keywords": [
     "Deephaven",
-    "matplotlib",
     "plugin",
-    "deephaven-js-plugin"
+    "deephaven-js-plugin",
+    "matplotlib"
   ],
   "author": "Deephaven Data Labs LLC",
   "license": "Apache-2.0",
@@ -20,13 +20,11 @@
   },
   "homepage": "https://github.com/deephaven/web-client-ui",
   "scripts": {
-    "build": "npm run clean-dist && webpack --config=configs/webpack/prod.js",
-    "clean-dist": "rimraf dist/*",
+    "build": "npm run clean && webpack",
+    "clean": "rimraf dist/*",
     "lint": "eslint './src/**/*.{js,ts,tsx}' --quiet",
-    "start": "npm run start-dev",
-    "start-dev": "webpack serve --config=configs/webpack/dev.js",
-    "start-prod": "npm run build && node express.js",
-    "test": "jest --coverage --watchAll --config=configs/jest.json"
+    "start": "webpack watch",
+    "test": "jest --watchAll"
   },
   "devDependencies": {
     "@babel/cli": "^7.16.7",
@@ -34,10 +32,10 @@
     "@babel/preset-env": "^7.16.7",
     "@babel/preset-react": "^7.16.7",
     "@babel/preset-typescript": "^7.16.7",
-    "@deephaven/components": "0.9.4-updatestylelint.5",
-    "@deephaven/dashboard": "0.9.4-updatestylelint.5",
-    "@deephaven/log": "0.9.4-updatestylelint.5",
-    "@deephaven/redux": "0.9.4-updatestylelint.5",
+    "@deephaven/components": "^0.11.0",
+    "@deephaven/dashboard": "^0.11.0",
+    "@deephaven/log": "^0.11.0",
+    "@deephaven/redux": "^0.11.0",
     "@types/jest": "^27.4.0",
     "@types/node": "^17.0.7",
     "@types/react": "^17.0.2",
@@ -70,10 +68,10 @@
     "webpack-merge": "^5.8.0"
   },
   "peerDependencies": {
-    "@deephaven/components": "0.9.4-updatestylelint.5",
-    "@deephaven/dashboard": "0.9.4-updatestylelint.5",
-    "@deephaven/log": "0.9.4-updatestylelint.5",
-    "@deephaven/redux": "0.9.4-updatestylelint.5",
+    "@deephaven/components": "^0.11.0",
+    "@deephaven/dashboard": "^0.11.0",
+    "@deephaven/log": "^0.11.0",
+    "@deephaven/redux": "^0.11.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-redux": "^7.2.4"
