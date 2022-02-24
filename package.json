@@ -1,11 +1,12 @@
 {
   "name": "@deephaven/matplotlib-js-plugin",
-  "version": "0.9.5-alpha.9",
+  "version": "0.10.0",
   "description": "Deephaven matplotlib plugin",
   "keywords": [
     "Deephaven",
     "matplotlib",
-    "plugin"
+    "plugin",
+    "deephaven-js-plugin"
   ],
   "author": "Deephaven Data Labs LLC",
   "license": "Apache-2.0",
